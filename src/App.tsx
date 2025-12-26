@@ -1,7 +1,7 @@
 import "./App.css";
-import OrderTitle from "./components/order-title";
-import PageLogo from "./components/page-logo";
-import ProductCart from "./components/product-cart";
+import OrderTitle from "./components/home/order-title";
+import PageLogo from "./components/home/page-logo";
+import ProductCart from "./components/home/product-list";
 
 function App() {
 	return (
