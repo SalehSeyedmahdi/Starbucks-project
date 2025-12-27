@@ -1,9 +1,15 @@
-function Quantity() {
+import { useState } from "react";
+
+function Quantity(props: { quantity?: number }) {
+	const [quantity, setQuantity] = useState(props.quantity);
+
 	function AddItem() {
-		console.log("add item");
+		setQuantity(quantity! + 1);
 	}
-	function Remove() {
-		console.log("remove item");
+	function RemoveItem() {
+		if (quantity! > 0) {
+			setQuantity(quantity! - 1);
+		}
 	}
 
 	return (
@@ -15,11 +21,11 @@ function Quantity() {
 				+
 			</div>
 			<div className="w-1/3 flex items-center justify-center text-sm bg-[#FFFFFF]">
-				0
+				{quantity}
 			</div>
 			<div
 				className="w-1/3 flex items-center justify-center bg-[#e6caa2] cursor-pointer"
-				onClick={Remove}
+				onClick={RemoveItem}
 			>
 				-
 			</div>

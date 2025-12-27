@@ -1,10 +1,10 @@
 import Data from "../shared/json";
 import Quantity from "../shared/quantity";
 
-function ProductCart() {
+function ProductCart(props: { data?: typeof Data }) {
 	return (
 		<div className="grid grid-cols-5 gap-2">
-			{Data.map((item) => {
+			{props.data?.map((item) => {
 				return (
 					<div
 						key={item.id}
@@ -14,7 +14,7 @@ function ProductCart() {
 						<p className="text-[#ececec] text-sm font-semibold">{item.name}</p>
 						<p className="font-bold text-[#e6caa2] text-md">${item.price}</p>
 						<div className="w-full flex justify-center">
-							<Quantity />
+							<Quantity quantity={item.quantity} />
 						</div>
 					</div>
 				);
