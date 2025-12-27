@@ -3,6 +3,8 @@ import BillTitle from "./components/home/bill-title";
 import OrderTitle from "./components/home/order-title";
 import PageLogo from "./components/home/page-logo";
 import ProductList from "./components/home/product-list";
+import SubmitOrder from "./components/home/submit-order";
+import TotalPrice from "./components/home/total-price";
 
 function App() {
 	return (
@@ -12,6 +14,8 @@ function App() {
 			<ProductList />
 			<BillTitle />
 			<BillList />
+			<TotalPrice />
+			<SubmitOrder />
 		</div>
 	);
 }

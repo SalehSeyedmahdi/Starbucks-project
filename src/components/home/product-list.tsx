@@ -10,7 +10,7 @@ function ProductList() {
 						key={item.id}
 						className="flex flex-col gap-1 bg-[#1e3932] p-2 rounded-lg"
 					>
-						<img src={item.img} className="w-26 h-28" />
+						<img src={item.img} className="w-26 h-27" />
 						<p className="text-[#ececec] text-sm font-semibold">{item.name}</p>
 						<p className="font-bold text-[#e6caa2] text-md">${item.price}</p>
 						<div className="w-full flex justify-center">

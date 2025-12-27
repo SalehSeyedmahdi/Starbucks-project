@@ -8,9 +8,9 @@ function BillList() {
 					return (
 						<div
 							key={item.id}
-							className="flex flex-col gap-2 bg-[#1e3932] p-2 rounded-lg"
+							className="flex flex-col gap-1 bg-[#1e3932] p-2 rounded-lg"
 						>
-							<img src={item.img} className="w-26 h-28" />
+							<img src={item.img} className="w-26 h-26" />
 							<p className="text-[#ececec] text-sm font-semibold">
 								{item.name}
 							</p>
