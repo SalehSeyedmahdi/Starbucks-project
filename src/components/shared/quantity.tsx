@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-function Quantity(props: { quantity?: number }) {
+function Quantity(props: { quantity: number }) {
 	const [quantity, setQuantity] = useState(props.quantity);
 
 	function AddItem() {
-		setQuantity(quantity! + 1);
+		setQuantity(quantity + 1);
 	}
 	function RemoveItem() {
-		if (quantity! > 0) {
-			setQuantity(quantity! - 1);
+		if (quantity > 0) {
+			setQuantity(quantity - 1);
 		}
 	}
 

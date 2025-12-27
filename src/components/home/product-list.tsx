@@ -1,10 +1,10 @@
 import Data from "../shared/json";
 import Quantity from "../shared/quantity";
 
-function ProductCart(props: { data?: typeof Data }) {
+function ProductList() {
 	return (
 		<div className="grid grid-cols-5 gap-2">
-			{props.data?.map((item) => {
+			{Data.map((item) => {
 				return (
 					<div
 						key={item.id}
@@ -23,4 +23,4 @@ function ProductCart(props: { data?: typeof Data }) {
 	);
 }
 
-export default ProductCart;
+export default ProductList;
