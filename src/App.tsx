@@ -1,3 +1,4 @@
+import BillTitle from "./components/home/bill-title";
 import OrderTitle from "./components/home/order-title";
 import PageLogo from "./components/home/page-logo";
 import ProductList from "./components/home/product-list";
@@ -8,6 +9,7 @@ function App() {
 			<PageLogo />
 			<OrderTitle />
 			<ProductList />
+			<BillTitle />
 		</div>
 	);
 }
