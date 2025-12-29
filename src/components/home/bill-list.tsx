@@ -1,10 +1,8 @@
-import Data from "../shared/json";
-
-function BillList() {
+function BillList({ products }: { products: any[] }) {
 	return (
 		<div>
 			<div className="grid grid-cols-5 gap-2">
-				{Data.map((item) => {
+				{products.map((item) => {
 					return (
 						<div
 							key={item.id}

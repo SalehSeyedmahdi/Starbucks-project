@@ -1,10 +1,15 @@
-import Data from "../shared/json";
 import Quantity from "../shared/quantity";
 
-function ProductList() {
+function ProductList({
+	products,
+	onChangeQty,
+}: {
+	products: any[];
+	onChangeQty: (id: number, delta: number) => void;
+}) {
 	return (
 		<div className="grid grid-cols-5 gap-2">
-			{Data.map((item) => {
+			{products.map((item) => {
 				return (
 					<div
 						key={item.id}
@@ -14,7 +19,11 @@ function ProductList() {
 						<p className="text-[#ececec] text-sm font-semibold">{item.name}</p>
 						<p className="font-bold text-[#e6caa2] text-md">${item.price}</p>
 						<div className="w-full flex justify-center">
-							<Quantity quantity={item.quantity} />
+							<Quantity
+								quantity={item.quantity}
+								onIncrease={() => onChangeQty(item.id, +1)}
+								onDecrease={() => onChangeQty(item.id, -1)}
+							/>
 						</div>
 					</div>
 				);
